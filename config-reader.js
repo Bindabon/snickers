@@ -43,7 +43,12 @@ function getConfig(domain) {
     alarm.debug('config not found' + domain + JSON.stringify(config));
     return {};
   }
-}
+}git clone https://github.com/michielbdejong/snickers-proxy
+cd snickers-proxy
+npm install
+cp example/config.json .
+sudo cp -r example/snitch /etc
+sudo mkdir -p /data/domains
 
 module.exports.init = function(callback) {
   loadConfig(true, function(err) {
